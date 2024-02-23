@@ -6,7 +6,7 @@ const Gallery = () => {
     const images = ['gal1.jpg', 'gal2.jpg', 'gal3.jpg', 'gal4.jpg'];
 
     return (
-        <div className="gallery" style={{ display: 'flex', overflowX: 'scroll' }}>
+        <div className="gallery">
             {images.map((img, index) => (
                 <img
                     key={index}
@@ -15,7 +15,7 @@ const Gallery = () => {
                     height='250px'
                     onClick={() => setSelectedImg(`img/${img}`)}
                     style={{ cursor: 'pointer' }}
-                />
+                /> 
             ))}
             {selectedImg && (
                 <div
